@@ -1,0 +1,384 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background-color: #0000;
+}
+
+.container
+{
+	position: absolute;
+	top: 12%;
+	left: 92%;
+	transform: translate(-50%, -50%);
+}
+
+.button
+{
+	position: relative;
+	text-align: center;
+	width: 140px;
+	padding: 12px;
+	font-size: 15px;
+	color: #15f4ee;
+	font-family: popping;
+	font-weight: 300;
+	border: 5px solid #15f4ee;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	cursor: pointer;
+	border-radius: 100px;
+	transition: 0.5s;
+}
+
+.button:hover
+{
+	box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
+				0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+	text-shadow: 0 0 5px #15f4ee, 0 0 5px #15f4ee;
+}
+
+.center
+{
+	position: absolute;
+	top: 14%;
+	left: 10%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+}
+
+.btn {
+  --border-color: linear-gradient(-45deg, #ffae00, #7e03aa, #00fffb);
+  --border-width: .125em;
+  --curve-size: .5em;
+  --blur: 30px;
+  --bg: #080312;
+  --color: #afffff;
+  color: var(--color);
+    /* use position: relative; so that BG is only for .btn */
+  position: relative;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: .5em 1.5em;
+  font-size: 17px;
+  border: 0;
+  text-transform: uppercase;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+  clip-path: polygon(
+            /* Top-left */
+            0% var(--curve-size),
+
+            var(--curve-size) 0,
+            /* top-right */
+            100% 0,
+            100% calc(100% - var(--curve-size)),
+
+            /* bottom-right 1 */
+            calc(100% - var(--curve-size)) 100%,
+            /* bottom-right 2 */
+            0 100%);
+  transition: color 250ms;
+}
+
+.btn::after,
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.btn::before {
+  background: var(--border-color);
+  background-size: 300% 300%;
+  animation: move-bg7234 5s ease infinite;
+  z-index: -2;
+}
+
+@keyframes move-bg7234 {
+  0% {
+    background-position: 31% 0%
+  }
+
+  50% {
+    background-position: 70% 100%
+  }
+
+  100% {
+    background-position: 31% 0%
+  }
+}
+
+.btn::after {
+  background: var(--bg);
+  z-index: -1;
+  clip-path: polygon(
+            /* Top-left */
+            var(--border-width) 
+            calc(var(--curve-size) + var(--border-width) * .5),
+
+            calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
+
+            /* top-right */
+            calc(100% - var(--border-width)) 
+            var(--border-width),
+
+            calc(100% - var(--border-width)) 
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+
+            /* bottom-right 1 */
+            calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
+            /* bottom-right 2 */
+            var(--border-width) calc(100% - var(--border-width)));
+  transition: clip-path 500ms;
+}
+
+.btn:where(:hover, :focus)::after {
+  clip-path: polygon(
+                /* Top-left */
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
+    
+                calc(100% - var(--border-width))
+
+                var(--border-width),
+    
+                /* top-right */
+                calc(100% - var(--border-width))
+
+                 var(--border-width),
+    
+                calc(100% - var(--border-width)) 
+
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
+    
+                /* bottom-right 1 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) 
+                calc(100% - var(--border-width)),
+
+                /* bottom-right 2 */
+                calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
+                calc(100% - var(--border-width)));
+  transition: 200ms;
+}
+
+.btn:where(:hover, :focus) {
+  color: #fff;
+}
+
+.card {
+  font-family: monospace;
+  margin-top: 40px;
+  width: 350px;
+  height: 270px;
+  background: #292828da;
+  border: 2px solid #000;
+  border-radius: 15px;
+  position: absolute;
+  top: 40%;
+  left: 50.2%;
+  transform: translate(-50%, -50%);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.dots {
+  display: flex;
+  justify-content: last baseline;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.dot-1 {
+  background-color: rgb(0, 132, 255);
+}
+
+.dot-2 {
+  background-color: rgb(230, 0, 255);
+}
+
+.dot-3 {
+  background-color: rgb(0, 255, 89);
+}
+
+.top p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dot , .top p {
+  margin: 5px;
+}
+
+.g-color {
+  color: darkgreen;
+}
+
+.bottom {
+  margin-top: 30px;
+  padding: 0 25px;
+}
+
+.code {
+  font-size: 15px;
+}
+
+.red {
+  color: rgb(210, 63, 52);
+}
+
+.violet {
+  color: rgb(181, 40, 203);
+}
+
+.blue {
+  color: rgb(91, 131, 223);
+}
+
+.orange {
+  color: rgb(195, 128, 3);
+}
+
+.white {
+  color: rgb(163, 163, 163);
+}
+
+.space-4 {
+  margin-left: 35px;
+}
+
+.space-4x2 {
+  margin-left: 70px;
+}
+
+
+.home {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.notes {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.share {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+
+.exam {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+  position: absolute;
+  top: 183.5%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+
+.que {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+  position: absolute;
+  top: 183.5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.cs {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  position: absolute;
+  top: 308.5%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.module {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+  position: absolute;
+  top: 308.5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+.co {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+  position: absolute;
+  top: 439%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+
+.cg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+  position: absolute;
+  top: 439%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+
+
+.feedb {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+  position: absolute;
+  top: 563.5%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+
+.report {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+  position: absolute;
+  top: 563.5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
